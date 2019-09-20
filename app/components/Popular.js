@@ -2,14 +2,14 @@ import React from 'react'
 
 export default class Popular extends React.Component {
     render(){
-        const lenguages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python', 'Golang']    
+        const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python', 'Golang']    
 
         return (
             <ul className='flex-center'>
-                {lenguages.map((lenguage) => (
-                <il key={lenguage}>
+                {languages.map((language) => (
+                <il key={language}>
                     <button className='btn-clear nav-link'>
-                        {lenguage}
+                        {language}
                     </button>
                 </il>
                 ))}
