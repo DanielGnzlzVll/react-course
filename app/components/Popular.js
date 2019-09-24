@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 function LangaugesNav({ selected, onUpdateLanguage}){
     const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python', 'Golang']    
@@ -19,6 +20,10 @@ function LangaugesNav({ selected, onUpdateLanguage}){
         )
 }
 
+LangaugesNav.propTypes={
+    selected: PropTypes.string.isRequired,
+    onUpdateLanguage: PropTypes.func.isRequired
+}
 export default class Popular extends React.Component {
     constructor(props) {
         super(props)
