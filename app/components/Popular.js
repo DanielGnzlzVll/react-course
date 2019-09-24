@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-function LangaugesNav({ selected, onUpdateLanguage}){
-    const languages = ['All', 'Javascript', 'Ruby', 'Java', 'CSS', 'Python', 'Golang']    
+function LangaugesNav ({ selected, onUpdateLanguage }) {
+    const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python', 'Golang']    
 
         return (
             <ul className='flex-center'>
@@ -11,7 +11,7 @@ function LangaugesNav({ selected, onUpdateLanguage}){
                     <button
                     className='btn-clear nav-link'
                     style={language === selected ? { color: 'rgb(187, 46, 31)' } : null}
-                    onClick={() => {onUpdateLanguage(language)}}>
+                    onClick={() => onUpdateLanguage(language)}>
                         {language}
                     </button>
                 </li>
@@ -20,10 +20,11 @@ function LangaugesNav({ selected, onUpdateLanguage}){
         )
 }
 
-LangaugesNav.propTypes={
+LangaugesNav.propTypes = {
     selected: PropTypes.string.isRequired,
     onUpdateLanguage: PropTypes.func.isRequired
 }
+
 export default class Popular extends React.Component {
     constructor(props) {
         super(props)
